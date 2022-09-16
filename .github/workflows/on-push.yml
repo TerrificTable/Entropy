@@ -18,10 +18,10 @@ jobs:
         java-version: '17'
 
     - name: Test
-      run: echo ${{ github.head }}
+      run: ${{ github.head }}
 
     - name: Compile project
-      run: cd C2/Backend && pwd && mvn project
+      run: cd C2/Backend && pwd && mvn clean install && mvn project
 
     - name: Rename resulting jar
       run: cd C2/Backend && pwd && mv target/Entropy-1.0-SNAPSHOT-jar-with-dependencies.jar ./Entropy-${{ github.head }}.jar
