@@ -18,7 +18,7 @@ jobs:
         java-version: '17'
 
     - name: Compile project
-      run: cd C2/Backend && pwd && mvn clean install > /dev/null && mvn project
+      run: cd C2/Backend && pwd && mvn clean install > /dev/null && mvn package
 
     - name: Rename resulting jar
       run: cd C2/Backend && pwd && mv target/Entropy-1.0-SNAPSHOT-jar-with-dependencies.jar ./Entropy.jar
