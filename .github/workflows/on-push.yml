@@ -17,14 +17,11 @@ jobs:
         distribution: 'adopt'
         java-version: '17'
 
-    - name: Test
-      run: ${{ github.head }}
-
     - name: Compile project
       run: cd C2/Backend && pwd && mvn clean install && mvn project
 
     - name: Rename resulting jar
-      run: cd C2/Backend && pwd && mv target/Entropy-1.0-SNAPSHOT-jar-with-dependencies.jar ./Entropy-${{ github.head }}.jar
+      run: cd C2/Backend && pwd && mv target/Entropy-1.0-SNAPSHOT-jar-with-dependencies.jar ./Entropy.jar
       
 
     # - name: Upload Artifact
