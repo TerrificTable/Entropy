@@ -4,7 +4,7 @@ on: [push]
 
 
 jobs:
-  build:
+  build-Entropy-Backend:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,3 +31,31 @@ jobs:
       with:
         name: Entropy-Server-Backend
         path: C2/Backend/Entropy-Server-Backend.jar
+
+  build-Entropy-Frontend:
+    strategy:
+      matrix:
+        go-version: [1.18.x]
+        os: ubuntu-lastest
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/setup-go@v3
+      with:
+        go-version: ${{ matrix.go-version }}
+    - name: Clone repo
+      uses: actions/checkout@v3
+    
+    - name: Build src directory
+      run: cd C2/Frontend && go build ./src
+    
+    - name: Rename src executable
+      run: mv C2/Framework/src C2/Framework/Entropy-Server-Frontend
+    
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Frontend executable
+        path: C2/Frontend/Entropy-Server-Frontend
+
+
