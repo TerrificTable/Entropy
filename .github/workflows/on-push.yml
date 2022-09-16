@@ -18,10 +18,10 @@ jobs:
         java-version: '17'
 
     - name: Compile project
-      run: pwd && cd C2/Backend && pwd # && mvn project
+      run: cd C2/Backend && mvn project
 
     - name: Rename resulting jar
-      run: pwd # && cd C2/Backend && mv target/
+      run: cd C2/Backend && mv target/Entropy-1.0-SNAPSHOT-jar-with-dependencies.jar ./Entropy-${{ push.head }}.jar
 
     # - name: Upload Artifact
     #   uses: actions/upload-artifact@v2
