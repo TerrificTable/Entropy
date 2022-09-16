@@ -1,0 +1,30 @@
+name: Build Pull Request
+
+on: [push]
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone repo
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'adopt'
+        java-version: '17'
+
+    - name: Compile project
+      run: echo pwd && cd C2/Backend # && mvn project
+
+    - name: Rename resulting jar
+      run: echo pwd # && cd C2/Backend && mv target/
+
+    # - name: Upload Artifact
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: pull-request-build
+    #     path: build/libs/
