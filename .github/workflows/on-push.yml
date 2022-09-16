@@ -21,13 +21,13 @@ jobs:
       run: cd C2/Backend && pwd && mvn clean install > /dev/null && mvn package
 
     - name: Rename resulting jar
-      run: cd C2/Backend && pwd && mv target/Entropy-1.0-SNAPSHOT-jar-with-dependencies.jar ./Entropy.jar
+      run: cd C2/Backend && pwd && mv target/Entropy-1.0-SNAPSHOT-jar-with-dependencies.jar ./Entropy-Server-Backend.jar
       
     - name: Did it build?
-      run: ls C2/Backend
+      run: ls C2/Backend | grep "Entropy-Server-Backend.jar"
 
-    # - name: Upload Artifact
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: pull-request-build
-    #     path: build/libs/
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: Entropy-Server-Backend
+        path: C2/Backend/Entropy-Server-Backend.jar
