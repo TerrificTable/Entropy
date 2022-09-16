@@ -1,0 +1,15 @@
+F:\programming\c2\Bots\Bot-C#\bin\Debug\net6.0\Bot-C#.exe
+F:\programming\c2\Bots\Bot-C#\bin\Debug\net6.0\Bot-C#.deps.json
+F:\programming\c2\Bots\Bot-C#\bin\Debug\net6.0\Bot-C#.runtimeconfig.json
+F:\programming\c2\Bots\Bot-C#\bin\Debug\net6.0\Bot-C#.dll
+F:\programming\c2\Bots\Bot-C#\bin\Debug\net6.0\Bot-C#.pdb
+F:\programming\c2\Bots\Bot-C#\obj\Debug\net6.0\Bot-C#.csproj.AssemblyReference.cache
+F:\programming\c2\Bots\Bot-C#\obj\Debug\net6.0\Bot-C#.GeneratedMSBuildEditorConfig.editorconfig
+F:\programming\c2\Bots\Bot-C#\obj\Debug\net6.0\Bot-C#.AssemblyInfoInputs.cache
+F:\programming\c2\Bots\Bot-C#\obj\Debug\net6.0\Bot-C#.AssemblyInfo.cs
+F:\programming\c2\Bots\Bot-C#\obj\Debug\net6.0\Bot-C#.csproj.CoreCompileInputs.cache
+F:\programming\c2\Bots\Bot-C#\obj\Debug\net6.0\Bot-C#.dll
+F:\programming\c2\Bots\Bot-C#\obj\Debug\net6.0\refint\Bot-C#.dll
+F:\programming\c2\Bots\Bot-C#\obj\Debug\net6.0\Bot-C#.pdb
+F:\programming\c2\Bots\Bot-C#\obj\Debug\net6.0\Bot-C#.genruntimeconfig.cache
+F:\programming\c2\Bots\Bot-C#\obj\Debug\net6.0\ref\Bot-C#.dll
