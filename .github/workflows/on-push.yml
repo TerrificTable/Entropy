@@ -21,7 +21,7 @@ jobs:
       run: cd C2/Backend && mvn project
 
     - name: Rename resulting jar
-      run: cd C2/Backend && mv target/Entropy-1.0-SNAPSHOT-jar-with-dependencies.jar ./Entropy-${{ push.head }}.jar
+      run: cd C2/Backend && mv target/Entropy-1.0-SNAPSHOT-jar-with-dependencies.jar ./Entropy-${{ github.head }}.jar
     
     - name: Test
       run: ls C2/Backend
