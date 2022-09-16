@@ -1,4 +1,4 @@
-package utils
+package xyz.terrifictable.entropy.utils
 
 import java.util.regex.Pattern
 

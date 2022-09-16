@@ -1,8 +1,8 @@
-package extensions
+package xyz.terrifictable.entropy.extensions
 
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
-import utils.JsonUtils
+import xyz.terrifictable.entropy.utils.JsonUtils
 import java.io.*
 import java.util.*
 import java.util.jar.JarEntry

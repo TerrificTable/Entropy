@@ -1,4 +1,4 @@
-package utils
+package xyz.terrifictable.entropy.utils
 
 import com.google.gson.Gson
 import com.google.gson.JsonObject

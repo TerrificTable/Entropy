@@ -1,7 +1,8 @@
-package feature
+package xyz.terrifictable.entropy.feature
 
-import extensions.Extension
-import feature.features.TestFeature
+import xyz.terrifictable.entropy.extensions.Extension
+import xyz.terrifictable.entropy.feature.Feature
+import xyz.terrifictable.entropy.feature.features.TestFeature
 
 class FeatureManager {
 

@@ -1,4 +1,4 @@
-package feature
+package xyz.terrifictable.entropy.feature
 
 abstract class Feature(var name: String, var description: String, var category: Category) {
 

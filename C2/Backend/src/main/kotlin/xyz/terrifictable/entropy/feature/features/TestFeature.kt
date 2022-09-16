@@ -1,7 +1,7 @@
-package feature.features
+package xyz.terrifictable.entropy.feature.features
 
-import feature.Feature
-import utils.Logger
+import xyz.terrifictable.entropy.feature.Feature
+import xyz.terrifictable.entropy.utils.Logger
 
 
 class TestFeature : Feature("Test", "This features is there to test features", Category.OTHER) {

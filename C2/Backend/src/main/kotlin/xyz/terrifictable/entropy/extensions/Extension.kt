@@ -1,4 +1,4 @@
-package extensions
+package xyz.terrifictable.entropy.extensions
 
 import java.lang.reflect.InvocationTargetException
 
