@@ -54,3 +54,31 @@ jobs:
         name: Frontend executable
         path: C2/Frontend/Entropy-Server-Frontend
 
+
+  build-C#Bot:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 6.0.x
+      
+      - name: Clone repo
+        uses: actions/checkout@v3
+      
+      - name: Build Linux
+        run: cd Bots/Bot-C# && dotnet publish -r linux-x64 -p:PublishSingleFile=true --self-contained false
+      - name: Build Windows
+        run: cd Bots/Bot-C# && dotnet publish -r win-x64 -p:PublishSingleFile=true --self-contained false
+      -name: Build MacOS
+        run: cd Bots/Bot-C# && dotnet publish -r osx-x64 -p:PublishSingleFile=true --self-contained false
+
+      - name: Move executables
+        run: cd Bots/Bot-C# && mkdir comp && mv bin/Debug/net6.0/win-x64/publish/Bot-C#.exe ./comp && mv bin/Debug/net6.0/linux-x64/publish/Bot-C# ./comp && mv bin/Debug/net6.0/osx-x64/publish/Bot-C# ./comp && ls ./comp 
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: C#Bot
+          path: Bots/Bot-C#/comp/
+ 
