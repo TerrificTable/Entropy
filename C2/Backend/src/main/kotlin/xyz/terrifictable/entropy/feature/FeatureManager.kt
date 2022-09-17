@@ -1,6 +1,5 @@
 package xyz.terrifictable.entropy.feature
 
-import xyz.terrifictable.entropy.extensions.Extension
 import xyz.terrifictable.entropy.feature.features.TestFeature
 
 class FeatureManager {
@@ -10,8 +9,6 @@ class FeatureManager {
     init {
 
         addFeature(TestFeature())
-
-        Extension.featuresLoad()
 
     }
 

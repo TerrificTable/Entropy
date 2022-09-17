@@ -3,7 +3,11 @@ package xyz.terrifictable.entropy.extensions
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
 import xyz.terrifictable.entropy.utils.JsonUtils
+import xyz.terrifictable.entropy.utils.Logger
 import java.io.*
+import java.lang.reflect.Method
+import java.net.URL
+import java.net.URLClassLoader
 import java.util.*
 import java.util.jar.JarEntry
 import java.util.jar.JarFile
@@ -46,7 +50,7 @@ enum class ExtensionManager {
 
                     while (entries.hasMoreElements()) {
                         val entry = entries.nextElement()
-                        if (!entry.isDirectory && Regex(".*.extension.json").matches(entry.name)) {
+                        if (!entry.isDirectory && entry.name == "extension.json") {
                             val inputStream = jarFile.getInputStream(entry)
                             val jsonObject: JsonObject = JsonUtils.convertStringToJsonObject(read(inputStream))
                             loadFromJson(jsonObject, file, jarFile)
@@ -61,7 +65,7 @@ enum class ExtensionManager {
         Collections.shuffle(getPlugins())
         println(String.format("Loaded Extension: %d\n", getPlugins().size))
         getPlugins().forEach { extension ->
-            println("- ${extension.getInfo().name} v$extension.getInfo().getVersion()",)
+            // println("- ${extension.getInfo().name} v$extension.getInfo().getVersion()")
         }
     }
 
@@ -92,13 +96,22 @@ enum class ExtensionManager {
 
 
         sanityCheckFiles(mainClass, jarFile)
-        // if (fileOfJar != null) FabricLauncherBase.getLauncher().addToClassPath(fileOfJar.toPath())
-        add(name, version, Class.forName(mainClass), description, toArray(list))
+        var classloader: ClassLoader
+        if (fileOfJar != null) {
+            val url: URL = fileOfJar.toURI().toURL()
+            classloader = URLClassLoader(arrayOf(url))
+
+
+
+            add(name, version, classloader.loadClass(mainClass), description, toArray(list))
+        } else {
+            Logger.error("Could not load extension: $name")
+        }
     }
 
     private fun sanityCheckFiles(mainClass: String, jarFile: JarFile?) {
-        val mainClassEntry = jarFile?.getJarEntry(mainClass.replace(".", "/") + ".class")
-            ?: throw RuntimeException("Main class $mainClass not found! Plugin will not be loaded!")
+        jarFile!!.getJarEntry(mainClass.replace(".", "/") + ".class")
+            ?: throw RuntimeException("Main class %s not found! Plugin will not be loaded!".formatted(mainClass))
     }
 
     private fun toArray(list: ArrayList<String>): Array<String?> {
@@ -108,6 +121,7 @@ enum class ExtensionManager {
         }
         return array
     }
+
 
     operator fun get(name: String): Extension? {
         for (plugin in plugins) {

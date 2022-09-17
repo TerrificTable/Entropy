@@ -1,7 +1,8 @@
 package xyz.terrifictable.entropy.api
 
 import dev.virefire.viira.Application
-import xyz.terrifictable.entropy.api.routs.*
+import xyz.terrifictable.entropy.api.routs.Root
+import xyz.terrifictable.entropy.api.routs.Test
 import xyz.terrifictable.entropy.extensions.Extension
 
 
@@ -12,8 +13,6 @@ class Router(private val app: Application) {
     init {
         addRoute(Root())
         addRoute(Test())
-
-        Extension.routesLoad()
     }
 
     fun addRoute(rout: Route) {
@@ -32,6 +31,8 @@ class Router(private val app: Application) {
 
 
     fun loadRouts() {
+        Extension.routesLoad()
+
         for (rout: Route in routs) {
             rout.rout(this.app)
         }

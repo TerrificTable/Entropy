@@ -1,0 +1,9 @@
+{
+  "name": "Crash Plugin",
+  "version": "${version}",
+  "mainClass": "xyz.terrifictable.example.extension.ExampleMain",
+  "description": "Example extension",
+  "authors": [
+    "TerrificTable - Example"
+  ]
+}

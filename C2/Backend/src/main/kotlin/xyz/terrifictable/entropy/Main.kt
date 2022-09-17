@@ -17,6 +17,7 @@ fun main(args: Array<String> ) {
 
     Extension.initialLoad()
     Defs.featureManager = FeatureManager()
+    Extension.featuresLoad()
 
 
 
