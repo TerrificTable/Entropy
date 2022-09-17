@@ -18,16 +18,16 @@ jobs:
         java-version: '17'
     
     - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
+      run: cd C2/Backend && chmod +x gradlew
 
     - name: Build with Gradle
-      run: ./gradlew build
+      run: cd C2/Backend && ./gradlew build
     
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
         name: Entropy-Server-Backend
-        path: build/libs/
+        path: C2/Backend/build/libs/
 
 
 
