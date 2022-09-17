@@ -75,7 +75,7 @@ jobs:
       run: cd Bots/Bot-C# && dotnet publish -r osx-x64 -p:PublishSingleFile=true --self-contained false
 
     - name: Move executables
-      run: cd Bots/Bot-C# && mkdir comp && mv bin/Debug/net6.0/win-x64/publish/Bot-C#.exe ./comp && mv bin/Debug/net6.0/linux-x64/publish/Bot-C# ./comp && mv bin/Debug/net6.0/osx-x64/publish/Bot-C# ./comp && ls ./comp 
+      run: cd Bots/Bot-C# && mkdir comp && mv bin/Debug/net6.0/win-x64/publish/Bot-C#.exe ./comp && mv bin/Debug/net6.0/linux-x64/publish/Bot-C# ./comp/Bot-C#-linux && mv bin/Debug/net6.0/osx-x64/publish/Bot-C# ./comp/Bot-C#-osx && ls ./comp 
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
