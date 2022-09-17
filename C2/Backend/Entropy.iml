@@ -39,6 +39,26 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.9.1" level="project" />
+    <orderEntry type="library" name="Maven: dev.virefire.kson:KSON:1.3.1" level="project" />
+    <orderEntry type="library" name="Maven: dev.virefire.viira:Viira:1.0.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-server-cio-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.21" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-server-host-common-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-server-core-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-serialization-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-events-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlin:kotlin-reflect:1.6.21" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.typesafe:config:1.4.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.fusesource.jansi:jansi:2.4.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-http-cio-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-http-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-websockets-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-network-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-utils-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: io.ktor:ktor-io-jvm:2.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.6.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:slf4j-api:1.7.36" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test-junit5:1.7.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains.kotlin:kotlin-test:1.7.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.6.0" level="project" />
@@ -49,7 +69,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.apiguardian:apiguardian-api:1.1.2" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.7.10" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.7.10" level="project" />
-    <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.7.10" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10" level="project" />
   </component>
