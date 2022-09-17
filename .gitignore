@@ -4,6 +4,7 @@ idea/
 target/
 
 Backend-Maven/
+build/
 
 /Bots/Bot-C#/bin/
 /Bots/Bot-C#/obj/
