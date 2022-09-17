@@ -42,6 +42,20 @@ class JsonFormatter(json: JsonObject) {
                         for (j in 0 until indent) sb.append("\t")
                     }
                     sb.append(c)
+                } else if (c == '[') {
+                    sb.append(c)
+                    if (gson_obj[i + 1] == ']') sb.append(" ") else {
+                        sb.append("\n")
+                        indent++
+                        for (j in 0 until indent) sb.append("\t")
+                    }
+                } else if (c == ']') {
+                    if (gson_obj[i - 1] != '[') {
+                        sb.append("\n")
+                        indent--
+                        for (j in 0 until indent) sb.append("\t")
+                    }
+                    sb.append(c)
                 } else if (c == ',') {
                     sb.append(c)
                     sb.append("\n")
