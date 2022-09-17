@@ -55,7 +55,7 @@ jobs:
         path: C2/Frontend/Entropy-Server-Frontend
 
 
-  build-C#Bot:
+  build-CSBot:
     runs-on: ubuntu-latest
     
     steps:
