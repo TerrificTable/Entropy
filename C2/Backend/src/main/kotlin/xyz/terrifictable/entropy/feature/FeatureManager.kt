@@ -1,7 +1,6 @@
 package xyz.terrifictable.entropy.feature
 
 import xyz.terrifictable.entropy.extensions.Extension
-import xyz.terrifictable.entropy.feature.Feature
 import xyz.terrifictable.entropy.feature.features.TestFeature
 
 class FeatureManager {
@@ -17,7 +16,7 @@ class FeatureManager {
     }
 
 
-    private fun addFeature(feature: Feature) {
+    fun addFeature(feature: Feature) {
         this.features.add(feature)
     }
 

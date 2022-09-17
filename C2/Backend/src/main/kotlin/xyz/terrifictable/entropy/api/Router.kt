@@ -2,6 +2,7 @@ package xyz.terrifictable.entropy.api
 
 import dev.virefire.viira.Application
 import xyz.terrifictable.entropy.api.routs.*
+import xyz.terrifictable.entropy.extensions.Extension
 
 
 class Router(private val app: Application) {
@@ -9,16 +10,18 @@ class Router(private val app: Application) {
     val routs: ArrayList<Route> = ArrayList()
 
     init {
-        addRout(Root())
-        addRout(Test())
+        addRoute(Root())
+        addRoute(Test())
+
+        Extension.routesLoad()
     }
 
-    fun addRout(rout: Route) {
+    fun addRoute(rout: Route) {
         routs.add(rout)
     }
 
 
-    fun getRout(name: String): Route? {
+    fun getRoute(name: String): Route? {
         for (rout: Route in routs) {
             if (rout.getName() == name) {
                 return rout

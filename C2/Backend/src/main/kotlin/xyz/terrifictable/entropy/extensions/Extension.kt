@@ -15,7 +15,7 @@ class Extension(private var mainClass: Class<*>, private var info: ExtensionInfo
                 val mainClass: Class<*> = extension.getMainClassInstance()!!::class.java
 
                 for (declaredMethod in mainClass.declaredMethods) {
-                    if (declaredMethod.isAnnotationPresent(ClientLoad::class.java)) {
+                    if (declaredMethod.isAnnotationPresent(InitialLoad::class.java)) {
                         try {
                             declaredMethod.invoke(extension.getMainClassInstance())
                         } catch (e: IllegalAccessException) {
@@ -34,6 +34,24 @@ class Extension(private var mainClass: Class<*>, private var info: ExtensionInfo
 
                 for (declaredMethod in mainClass.declaredMethods) {
                     if (declaredMethod.isAnnotationPresent(FeaturesLoad::class.java)) {
+                        try {
+                            declaredMethod.invoke(extension.getMainClassInstance())
+                        } catch (e: IllegalAccessException) {
+                            e.printStackTrace()
+                        } catch (e: InvocationTargetException) {
+                            e.printStackTrace()
+                        }
+                    }
+                }
+            }
+        }
+
+        fun routesLoad() {
+            ExtensionManager.INSTANCE.getPlugins().forEach { extension ->
+                val mainClass: Class<*> = extension.getMainClassInstance()!!::class.java
+
+                for (declaredMethod in mainClass.declaredMethods) {
+                    if (declaredMethod.isAnnotationPresent(RoutesLoad::class.java)) {
                         try {
                             declaredMethod.invoke(extension.getMainClassInstance())
                         } catch (e: IllegalAccessException) {
@@ -74,7 +92,10 @@ class Extension(private var mainClass: Class<*>, private var info: ExtensionInfo
     @Retention(AnnotationRetention.RUNTIME)
     annotation class FeaturesLoad
     @Retention(AnnotationRetention.RUNTIME)
-    annotation class ClientLoad
+    annotation class InitialLoad
+    @Retention(AnnotationRetention.RUNTIME)
+    annotation class RoutesLoad
+
 
 
     class ExtensionInfo(
