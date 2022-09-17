@@ -5,5 +5,5 @@ target/
 
 Backend-Maven/
 
-bin/
-obj/
+/Bots/Bot-C#/bin/
+/Bots/Bot-C#/obj/
