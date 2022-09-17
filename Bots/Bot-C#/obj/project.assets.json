@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\programming\\c2\\Bots\\Bot-C#\\Bot-C#.csproj",
+      "projectUniqueName": "F:\\programming\\a-lot-of-langs\\entropy\\master\\Bots\\Bot-C#\\Bot-C#.csproj",
       "projectName": "Bot-C#",
-      "projectPath": "F:\\programming\\c2\\Bots\\Bot-C#\\Bot-C#.csproj",
+      "projectPath": "F:\\programming\\a-lot-of-langs\\entropy\\master\\Bots\\Bot-C#\\Bot-C#.csproj",
       "packagesPath": "C:\\Users\\Sandbox\\.nuget\\packages\\",
-      "outputPath": "F:\\programming\\c2\\Bots\\Bot-C#\\obj\\",
+      "outputPath": "F:\\programming\\a-lot-of-langs\\entropy\\master\\Bots\\Bot-C#\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sandbox\\AppData\\Roaming\\NuGet\\NuGet.Config"
