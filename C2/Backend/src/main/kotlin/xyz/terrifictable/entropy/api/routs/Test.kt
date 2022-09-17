@@ -13,7 +13,7 @@ class Test : Route("test", Type.BOTH) {
 
         app.get(this.getName()) {
             EventRouteGet(Test(), res)
-            res.text("Hello World!")
+            res.text("Hello World!") // .send -> send a file to download
         }
 
         app.post(this.getName()) {

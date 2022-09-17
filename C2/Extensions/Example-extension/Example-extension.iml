@@ -75,7 +75,7 @@
     <orderEntry type="module-library">
       <library name="Maven: xyz.terrifictable.entropy:Backend:1.0">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Backend/build/libs/Backend-1.0-plain.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../Backend/build/libs/Backend-1.0-plain.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

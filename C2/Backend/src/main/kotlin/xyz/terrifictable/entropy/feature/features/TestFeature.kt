@@ -15,7 +15,7 @@ class TestFeature : Feature("Test", "This features is there to test features", C
 
     override fun onEvent(event: Event<*>) {
         if (event is EventRouteGet) {
-            Logger.info("$event")
+            Logger.info(event.javaClass.simpleName)
         }
     }
 

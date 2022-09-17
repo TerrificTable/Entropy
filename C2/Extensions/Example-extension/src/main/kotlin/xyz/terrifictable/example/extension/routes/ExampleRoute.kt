@@ -12,7 +12,7 @@ class ExampleRoute : Route("Example", Type.GET) {
         app.get("/example") {
 
             EventRouteGet(ExampleRoute(), res)
-            res.send("<h1></h1><hr><a href=\"https://github.com/TerrificTable/Entropy/tree/master/C2/Example-Extension\">Link</a>".toByteArray())
+            res.text("<h1></h1><hr><a href=\"https://github.com/TerrificTable/Entropy/tree/master/C2/Example-Extension\">Link</a>")
 
         }
 
