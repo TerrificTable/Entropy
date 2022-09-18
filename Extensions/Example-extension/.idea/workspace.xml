@@ -47,7 +47,7 @@
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "F:/programming/a-lot-of-langs/entropy/master/C2/Extensions/Example-extension",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -86,6 +86,7 @@
       <workItem from="1663446324307" duration="154000" />
       <workItem from="1663446585247" duration="197000" />
       <workItem from="1663448869495" duration="1216000" />
+      <workItem from="1663484164736" duration="683000" />
     </task>
     <servers />
   </component>

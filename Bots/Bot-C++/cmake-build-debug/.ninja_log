@@ -1,0 +1,4 @@
+# ninja log v5
+1	438	6852030584196246	CMakeFiles/Bot_CPP.dir/src/main.cpp.obj	5f20e8c528dacc94
+609	1039	6852030590196349	Bot_CPP.exe	1f377b2b603b3788
+12	3211	6852057367063365	CMakeFiles/Bot_CPP.dir/src/sigscan.cpp.obj	bd85586284a70dc6

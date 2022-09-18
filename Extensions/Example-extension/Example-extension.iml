@@ -30,15 +30,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Backend/build/libs/Backend-1.0-plain.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="library" name="Maven: dev.virefire.kson:KSON:1.3.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.google.code.gson:gson:2.9.0" level="project" />
     <orderEntry type="library" name="Maven: dev.virefire.viira:Viira:1.0.3" level="project" />

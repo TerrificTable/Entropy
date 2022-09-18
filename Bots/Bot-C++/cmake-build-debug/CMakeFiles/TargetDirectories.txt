@@ -1,0 +1,3 @@
+F:/programming/a-lot-of-langs/entropy/master/Bots/Bot-C++/cmake-build-debug/CMakeFiles/Bot_CPP.dir
+F:/programming/a-lot-of-langs/entropy/master/Bots/Bot-C++/cmake-build-debug/CMakeFiles/edit_cache.dir
+F:/programming/a-lot-of-langs/entropy/master/Bots/Bot-C++/cmake-build-debug/CMakeFiles/rebuild_cache.dir
