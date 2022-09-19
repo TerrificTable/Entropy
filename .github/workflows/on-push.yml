@@ -65,7 +65,7 @@ jobs:
       run: cd C2/Frontend && go build -o ./build/Entropy-Frontend-${{ steps.vars.outputs.sha_short }}-${{ matrix.os }} ./src
     
     - name: Windows
-      if: ${{ matrix.os == "windows-2022" }}
+      if: ${{ matrix.os == 'windows-2022' }}
       run: mv C2/Frontend/build/Entropy-Frontend-${{ steps.vars.outputs.sha_short }}-${{ matrix.os }} C2/Frontend/build/Entropy-Frontend-${{ steps.vars.outputs.sha_short }}-${{ matrix.os }}.exe
 
     - name: Upload Artifact
