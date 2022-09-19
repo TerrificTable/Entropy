@@ -38,7 +38,7 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: Entropy Backend
+        name: Entropy Backend ${{ steps.vars.outputs.sha_short }}
         path: C2/Backend/build/libs/
 
 
@@ -71,7 +71,7 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: Entropy Frontend
+        name: Entropy Frontend ${{ steps.vars.outputs.sha_short }}
         path: C2/Frontend/build/
 
 
@@ -104,6 +104,6 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: C#Bot
+        name: C# Bot ${{ steps.vars.outputs.sha_short }}
         path: Bots/Bot-C#/comp/
 
