@@ -47,7 +47,7 @@ jobs:
     strategy:
       matrix:
         go-version: [1.18.x]
-        os: [ubuntu-latest]
+        os: [ubuntu-22.04, macos-12, windows-2022]
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -62,7 +62,7 @@ jobs:
       run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
 
     - name: Build src directory
-      run: cd C2/Frontend && go build -o ./build/Entropy-Server-Frontend-${{ steps.vars.outputs.sha_short }} ./src
+      run: cd C2/Frontend && go build -o ./build/Entropy-Frontend-${{ steps.vars.outputs.sha_short }}-${{ matrix.os }} ./src
     
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
