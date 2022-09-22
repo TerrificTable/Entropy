@@ -3,10 +3,9 @@
 idea/
 target/
 
-Backend-Maven/
 build/
 
-/Bots/Bot-C#/bin/
-/Bots/Bot-C#/obj/
+bin/
+obj/
 
-/Bots/Bot-C++/cmake-build-debug
+cmake-build-debug
