@@ -64,7 +64,7 @@ int main(int argc, char** argv) {
     // if file doesnt exist; exit
     if (!file_exists(dll_name)) error("file_exist", "File doesn't exist");
     //                                                                                      tbh this is probably the worst thing i could have done, but who cares
-    if (!GetFullPathNameA(dll_name, MAX_PATH, dll_path, NULL)) error("GEtFullPathNameA", strncpy(const_cast<char*>(dll_name), "Failed to get full DLL path for: ", sizeof(dll_name)));
+    if (!GetFullPathNameA(dll_name, MAX_PATH, dll_path, NULL)) error("GetFullPathNameA", strncpy(const_cast<char*>(dll_name), "Failed to get full DLL path for: ", sizeof(dll_name)));
 
     // asign process id
     get_proc_id(window_title, proc_id);
