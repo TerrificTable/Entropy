@@ -88,7 +88,9 @@ int main(int argc, char** argv) {
 
     CloseHandle(h_proc);
     VirtualFreeEx(h_proc, allocated_mem, 0, MEM_RELEASE);
-    MessageBoxA(0, "Successfully injected", "Success", 0);
-    
+    // MessageBoxA(0, "Successfully injected", "Success", 0);
+    std::cout << "Successfully Injected" << std::endl;
+
+
     return 0;
 }
