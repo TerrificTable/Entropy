@@ -1,5 +1,7 @@
 *.exe
 *.o
+*.dll
+
 idea/
 target/
 
