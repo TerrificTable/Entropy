@@ -11,3 +11,7 @@ bin/
 obj/
 
 cmake-build-debug
+
+
+# temporary
+C++/thread-hijack/
