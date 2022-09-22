@@ -30,8 +30,8 @@ void error(const char* t_error, const char* message, HANDLE h_proc) {
     error(t_error, message);
 }
 void error(const char* t_error, const char* message, HANDLE h_proc, void* allocated_mem) {
-    CloseHandle(h_proc);
     VirtualFreeEx(h_proc, allocated_mem, 0, MEM_RELEASE);
+    CloseHandle(h_proc);
     error(t_error, message);
 }
 
