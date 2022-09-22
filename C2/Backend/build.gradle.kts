@@ -25,6 +25,9 @@ dependencies {
 
     implementation("com.google.code.gson:gson:2.9.0")
 
+    implementation("org.mariadb.jdbc:mariadb-java-client:3.0.7")    // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+    implementation("mysql:mysql-connector-java:8.0.30")             // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+
 
     implementation("dev.virefire.kson:KSON:1.3.1")
     implementation("dev.virefire.viira:Viira:1.0.3")

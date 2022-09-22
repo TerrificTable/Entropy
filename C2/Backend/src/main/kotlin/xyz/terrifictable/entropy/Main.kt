@@ -12,6 +12,7 @@ import kotlin.random.asKotlinRandom
 fun main(args: Array<String> ) {
     val args = CommandLineArguments(args)
     Logger.info("Starting", "MainKt")
+
     ExtensionManager.INSTANCE.loadExtensions()
 
 

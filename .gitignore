@@ -8,3 +8,5 @@ build/
 
 /Bots/Bot-C#/bin/
 /Bots/Bot-C#/obj/
+
+/Bots/Bot-C++/cmake-build-debug
