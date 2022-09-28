@@ -8,7 +8,7 @@ import xyz.terrifictable.entropy.extensions.Extension
 
 class Router(private val app: Application) {
 
-    val routs: ArrayList<Route> = ArrayList()
+    val routes: ArrayList<Route> = ArrayList()
 
     init {
         addRoute(Root())
@@ -16,12 +16,12 @@ class Router(private val app: Application) {
     }
 
     fun addRoute(rout: Route) {
-        routs.add(rout)
+        routes.add(rout)
     }
 
 
     fun getRoute(name: String): Route? {
-        for (rout: Route in routs) {
+        for (rout: Route in routes) {
             if (rout.getName() == name) {
                 return rout
             }
@@ -33,9 +33,14 @@ class Router(private val app: Application) {
     fun loadRouts() {
         Extension.routesLoad()
 
-        for (rout: Route in routs) {
-            rout.rout(this.app)
+        for (route: Route in routes) {
+            if (!exists(routes, route))
+                route.rout(this.app)
         }
+    }
+
+    private fun exists(list: ArrayList<Route>, route: Route): Boolean {
+        return list.contains(route)
     }
 
 }
